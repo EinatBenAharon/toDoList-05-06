@@ -1,0 +1,68 @@
+.container-fluid {
+    height: 100vh;
+    background-image: url(images/todo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.container {
+    height: 100vh;
+    width: 800px;
+    background-color: rgba(255, 255, 255, 0.638);
+}
+
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 8px 10px;
+}
+
+.close:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: #fff6ba;
+    font-size: 18px;
+    margin-bottom: 2px;
+}
+
+ul li:nth-child(odd) {
+    background: #fffcf4;
+}
+
+ul li.checked {
+    background: #7e775c;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+}
